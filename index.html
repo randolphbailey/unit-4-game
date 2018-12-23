@@ -16,23 +16,25 @@
         <!--Header-->
         <div class="row">
             <div class="col-12">
-                <h1>Crystal Collector</h1>
-                <p>
-                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                        Click here for instructions
+                    <h1 class="d-flex justify-content-start">Crystal Collector</h1>
+                    <p class="d-flex justify-content-start">
+                    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Click here for instructions!
                     </button>
                     </p>
                     <div class="collapse" id="collapseExample">
                     <div class="card card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                        Each crystal has been given a random (hidden!) value.  Click the crystals to increase your counter.  Try to make your counter match the target number!  If you go over, you lose :(
                     </div>
                 </div>
             </div>
         </div>
+        <hr>
         <!--Main Game row with two columns-->
         <div class="row">
             <div class="col-md-6 col-12">
                 <!--Random number / playing field-->
+                <p><h2>Wins: <span id="wins"></span> | Losses: <span id="losses"></span></h2></p>
                 <div class="jumbotron jumbotron-fluid">
                     <div class="container">
                         <h1 class="display-4">Target Number: <span id="targetNumber"></span></h1>
@@ -42,7 +44,7 @@
                     <div class="container">
                         <h1 class="display-4">Current Number: <span id="counter"></span></h1>
                     </div>
-                </div>
+                </div>    
             </div>
             <div class="col-md-6 col-12">
                 <!--Crystal grid-->
@@ -66,6 +68,11 @@
                         <img class="img-fluid" id="crystal4" src="assets/images/crystal4.png" value="">
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-12">
+                <button class="btn btn-warning m-2" id="newGame" onclick="newGame()">New Game</button><button class="btn btn-danger m-2" id="resetScores" onclick="resetScores()">Reset Scores</button>
             </div>
         </div>
     </div>

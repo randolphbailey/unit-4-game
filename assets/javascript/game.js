@@ -20,17 +20,35 @@ function newGame() {
     counter = 0;
     $("#targetNumber").text(target);
     $("#counter").text(counter);
+    $("#wins").text(wins);
+    $("#losses").text(losses);
+}
+
+function gameOver() {
+    if (counter > target) { //Loss condition
+        losses++;
+        newGame();
+    }
+    else if (counter == target) { //Win Condition
+        wins++;
+        newGame();
+    }
+    else {
+        return false;
+    }
 }
 
 function resetScores() {
     wins = 0;
     losses = 0;
-    //add code to update page here
+    $("#wins").text(wins);
+    $("#losses").text(losses);
 }
 
 var testnum = getRndInteger(0, 10);
 
 window.onload = function() {
+    resetScores();
     newGame();
 }
 
@@ -38,17 +56,21 @@ $("document").ready(function() {
     $("#crystal1").click(function() {
         counter += value1;
         $("#counter").text(counter);
+        gameOver();
     });
     $("#crystal2").click(function() {
         counter += value2;
         $("#counter").text(counter);
+        gameOver();
     });
     $("#crystal3").click(function() {
         counter += value3;
         $("#counter").text(counter);
+        gameOver();
     });
     $("#crystal4").click(function() {
         counter += value4;
         $("#counter").text(counter);
+        gameOver();
     });
 });
