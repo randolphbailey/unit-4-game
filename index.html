@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Crystal Game</title>
+</head>
+<body>
+    <div class="container">
+        <!--Header-->
+        <div class="row">
+            <div class="col-12">
+                <h1>Crystal Collector</h1>
+                <p>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Click here for instructions
+                    </button>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Main Game row with two columns-->
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <!--Random number / playing field-->
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4">Target Number: <span id="targetNumber"></span></h1>
+                    </div>
+                </div>
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4">Current Number: <span id="counter"></span></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <!--Crystal grid-->
+                <div class="row">
+                    <div class="col-6">
+                        <!--First Crystal-->
+                        <img class="img-fluid" id="crystal1" src="assets/images/crystal1.png" value="">
+                    </div>
+                    <div class="col-6">
+                        <!--Second Crystal-->
+                        <img class="img-fluid" id="crystal2" src="assets/images/crystal2.png" value="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <!--Third Crystal-->
+                        <img class="img-fluid" id="crystal3" src="assets/images/crystal3.png" value="">
+                    </div>
+                    <div class="col-6">
+                        <!--Fourth Crystal-->
+                        <img class="img-fluid" id="crystal4" src="assets/images/crystal4.png" value="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/javascript/game.js"></script>
+</body>
+</html>
